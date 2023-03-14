@@ -70,8 +70,7 @@
 							<packageName>com.banking.speechapi</packageName>
 							<apiPackage>com.banking.speechapi.api</apiPackage>
 							<modelPackage>com.banking.speechapi.model</modelPackage>
-							<!-- Uncomment in order to display the config options -->
-														<configHelp>true</configHelp>
+
 							<configOptions>
 								<interfaceOnly>true</interfaceOnly>
 							</configOptions>
