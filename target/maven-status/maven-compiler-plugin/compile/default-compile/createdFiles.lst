@@ -1,0 +1,8 @@
+com\banking\speechapi\api\ApiUtil.class
+com\banking\speechapi\CustomerController.class
+com\banking\speechapi\Customer.class
+com\banking\speechapi\model\Customer.class
+com\banking\speechapi\SpeechapiApplication.class
+com\banking\speechapi\api\CustomerApi.class
+com\banking\speechapi\model\CustomerFullData.class
+com\banking\speechapi\model\CustomerFullDataAllOf.class
