@@ -9,6 +9,27 @@ tags:
     description: Customer specific data.
 paths:
   /customer:
+    get:
+      tags:
+        - Customer
+      summary: Retrieve Customer
+      operationId: getAllCustomer
+      parameters:
+        - name: customerId
+          in: query
+          required: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/AllCustomerData'
+        '404':
+          description: NOT FOUND
     post:
       tags:
         - Customer
@@ -69,3 +90,7 @@ components:
               description: The ID of the customer
               format: int64
       description: Full data of the customer.
+    AllCustomerData:
+      type: array
+      items:
+        $ref: '#/components/schemas/Customer'

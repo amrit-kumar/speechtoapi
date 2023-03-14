@@ -1,5 +1,5 @@
 package com.banking.speechapi;
-import java.util.HashMap;
+import java.util.*;
 
 import com.banking.speechapi.api.CustomerApi;
 import com.banking.speechapi.model.Customer;
@@ -27,7 +27,22 @@ public class CustomerController implements CustomerApi {
 
         return ResponseEntity.ok(domainToApi(customer));
     }
+    @Override
+    public
+    ResponseEntity<List<Customer>> getAllCustomer(Long customerId) {
 
+        List<Customer> allCustomers =  new ArrayList<Customer>();
+
+        for ( com.banking.speechapi.Customer value : customers.values()) {
+            Customer cus = new Customer();
+            System.out.println(" ========================== " + value.getFirstName());
+            cus.setFirstName(value.getFirstName());
+            cus.setLastName(value.getLastName());
+            allCustomers.add(cus);
+        }
+        return ResponseEntity.ok((allCustomers));
+
+    }
     @Override
     public ResponseEntity<CustomerFullData> getCustomer(Long customerId) {
         if (customers.containsKey(customerId)) {
